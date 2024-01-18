@@ -18,15 +18,16 @@
         <p style="padding-left: 3rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit.  <br> Praesentium odio dolorem natus doloribus et dignissimos  <br>debitis reiciendis beatae corrupti, dolores voluptatibus <br> enim obcaecati, eveniet officia tempore <br> modi? Vitae, voluptatibus in?</p>
     </div>
  </div>
-    {% for product in products %}
+
+{% for product in products %}
     <section class="products">
-    <div class="products_card">
-        <div class="product_img box1"><img src="{{product.product_img}}" alt=""></div>
-        <h5 class="text">{{product.name}}</h5>
-        <h3 class="text">{{product.price}}</h3>
-    </div>
+        <div class="products_card">
+            <div class="product_img box1"><img src="{{product.product_img}}" alt=""></div>
+            <h5 class="text">{{product.name}}</h5>
+            <h3 class="text">${{product.price}}</h3>
+        </div>
     </section>
-    {% endfor %}
+{% endfor %}
 
  
  <footer>
