@@ -40,8 +40,8 @@ footer{
     
 }
 .products{
- display: flex;
- justify-content: space-evenly;
+ position: absolute;
+ display:grid;
  flex-direction: row;
  flex-wrap: wrap;
 }

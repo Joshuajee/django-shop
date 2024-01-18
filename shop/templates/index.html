@@ -1,4 +1,5 @@
 {% load static %}
+{% static "static/images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,43 +18,15 @@
         <p style="padding-left: 3rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit.  <br> Praesentium odio dolorem natus doloribus et dignissimos  <br>debitis reiciendis beatae corrupti, dolores voluptatibus <br> enim obcaecati, eveniet officia tempore <br> modi? Vitae, voluptatibus in?</p>
     </div>
  </div>
- <section class="products">
- <div class="products_card">
-    <div class="product_img box1"><img src="{% static 'image/iphone14pm.jpg' %}" alt=""></div>
-    <h5 class="text">Product</h5>
-    <h3 class="text">Price</h3>
-</div>
-<div class="products_card">
-    <div class="product_img box1"><img src="{% static 'image/iphonex.jpg' %}" alt=""></div>
-    <h5 class="text">Product</h5>
-    <h3 class="text">Price</h3>
-</div>
-<div class="products_card">
-    <div class="product_img box1"><img src="{% static 'image/iphone133.jpg' %}" alt=""></div>
-    <h5 class="text">Product</h5>
-    <h3 class="text">Price</h3>
-</div>
-<div class="products_card">
-    <div class="product_img box1"><img src="{% static 'image/iphone13.jpg' %}" alt=""></div>
-    <h5 class="text">Product</h5>
-    <h3 class="text">Price</h3>
-</div>
-<div class="products_card">
-    <div class="product_img box1"><img src="{% static 'image/iphone15.jpg' %}" alt=""></div>
-    <h5 class="text">Product</h5>
-    <h3 class="text">Price</h3>
-</div>
-<div class="products_card">
-    <div class="product_img box1"><img src="{% static 'image/iphone14.jpg' %}" alt=""></div>
-    <h5 class="text">Product</h5>
-    <h3 class="text">Price</h3>
-</div>
-<div class="products_card">
-    <div class="product_img box1"><img src="{% static 'image/iphone11.jpg' %}" alt=""></div>
-    <h5 class="text">Product</h5>
-    <h3 class="text">Price</h3>
-</div>
-</section>
+    {% for product in products %}
+    <section class="products">
+    <div class="products_card">
+        <div class="product_img box1"><img src="{{product.product_img}}" alt=""></div>
+        <h5 class="text">{{product.name}}</h5>
+        <h3 class="text">{{product.price}}</h3>
+    </div>
+    </section>
+    {% endfor %}
 
  
  <footer>
