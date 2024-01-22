@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import CartItem
-from shop.models import Product
+from shop.models import Products
 
 
 def add_to_cart(request, product_id):
     if request.method == 'POST':
-        product = Product.objects.get(pk=product_id)
+        product = Products.objects.get(pk=product_id)
         user = request.user
         quantity = int(request.POST.get('quantity', 1))
         cart_item, created = CartItem.objects.get_or_create(user=user, product=product)
