@@ -40,17 +40,19 @@ footer{
     
 }
 .products{
- display: flex;
- justify-content: space-evenly;
- flex-direction: row;
- flex-wrap: wrap;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
 .products_card{
     background: white;
     width: 280px;
     height: 340px;
     margin: 20px;
     border-radius: 10px;
+    
 }
 .product_img{
     
