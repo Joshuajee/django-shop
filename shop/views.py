@@ -6,3 +6,7 @@ from .models import Products
 def index(req):
     products = Products.objects.all()
     return render(req, "index.html", {'products': products})
+
+def product_page(req):
+    product = Products.objects.all()
+    return render(req, 'products.html', {"product": product})

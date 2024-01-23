@@ -54,6 +54,11 @@ footer{
     border-radius: 10px;
     
 }
+
+section {
+    text-decoration: none;
+}
+
 .product_img{
     
     height: 150px;
@@ -73,9 +78,16 @@ footer{
 }
 .products_card h5 {
     padding-left: 10px;
+    text-decoration: none;
 
 }
 .products_card h3{
     margin-top: -19px;
     padding-left: 13px;
+    text-decoration: none;
+}
+
+section a{
+    text-decoration: none;
+    color: black;
 }

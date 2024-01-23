@@ -13,5 +13,5 @@ class Products (models .Model):
 
     def save(self, *args, **kwargs) :
         slug = self.name
-        self.slug = slugify(self.name+ "-"+ slug)
+        self.slug = slugify(slug)
         return super().save(*args, **kwargs)
