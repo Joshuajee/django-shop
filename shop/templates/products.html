@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product-</title>
+    <title>product-{{product.slug}}</title>
     <link rel="stylesheet" href="{% static 'styles/products.css' %}">
 </head>
 <body style="background: wheat;">
 <header style="background-color: rgb(48, 33, 33); color: white; text-align:center; height:10vh; width:100%; padding-top:1px; border-radius:3px"><a href="/"><h3>Home</h3></a></header><br>
 
 <div class="product_page">
-    <div class="product_page_img"><img src="iphone14pm.jpg" alt=""></div>
+    <div class="product_page_img"><img src="{{product.product_img}}" alt=""></div>
     <div id="vert-line"></div>
     <div id="vert-line2"></div>
 </div>

@@ -7,6 +7,6 @@ def index(req):
     products = Products.objects.all()
     return render(req, "index.html", {'products': products})
 
-def product_page(req):
-    product = Products.objects.all()
+def product_page(req, slug):
+    product = Products.objects.get(slug= slug)
     return render(req, 'products.html', {"product": product})

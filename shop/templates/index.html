@@ -21,7 +21,7 @@
 
  <section class="products">
 {% for product in products %}
-<a href="product/">
+<a href="product/{{product.slug}}">
     <div class="products_card">
             <div class="product_img box1"><img src="{{product.product_img}}" alt=""></div>
             <h5 class="text">{{product.name}}</h5>
