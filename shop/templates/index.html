@@ -13,27 +13,30 @@
 <body style="background-color: wheat;">
  <header style="background-color: rgb(48, 33, 33); color: white; text-align:center; height:10vh; width:100%; padding-top:1px; border-radius:15px"><h1>Phone Store</h1></header><br>
 
- <div class="header-img">
+ <!-- <div class="header-img">
     <div class="investorb" style="background-color: rgba(37, 38, 26, 0.365); color:white; height:80vh; width:100%; border-radius: 10px;"><h1 style="padding-left: 3rem;">Keldan Django-Shop</h1>
         <p style="padding-left: 3rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit.  <br> Praesentium odio dolorem natus doloribus et dignissimos  <br>debitis reiciendis beatae corrupti, dolores voluptatibus <br> enim obcaecati, eveniet officia tempore <br> modi? Vitae, voluptatibus in?</p>
     </div>
- </div>
+ </div> -->
 
+ <section class="products">
 {% for product in products %}
-    <section class="products">
-        <div class="products_card">
+<a href="product/">
+    <div class="products_card">
             <div class="product_img box1"><img src="{{product.product_img}}" alt=""></div>
             <h5 class="text">{{product.name}}</h5>
             <h3 class="text">${{product.price}}</h3>
         </div>
-    </section>
+</a>
 {% endfor %}
+</section>
 
- 
+ <div>
  <footer>
     <div class="copy">
         <h4 class="footer-text">© Copyright Investor B | Django-Shop</h4>
     </div>
  </footer>
+ </div>
 </body>
 </html>
